@@ -10,7 +10,10 @@ Implementação do protocolo de transferência confiável **Go-Back-N (GBN)** so
 src/
 ├── Datagrama.java   # Formato do pacote: serialização e deserialização do cabeçalho
 ├── Receptor.java    # FSM do receptor GBN + simulação de perda + estatísticas
-└── Emissor.java     # FSM do emissor GBN: janela deslizante, timer e retransmissão
+├── Emissor.java     # FSM do emissor GBN: janela deslizante, timer e retransmissão
+├── README.md
+└── relatorio_gbn.pdf
+
 ```
 
 Formato do datagrama (11 bytes de cabeçalho + até 1024 bytes de payload):
@@ -30,7 +33,6 @@ Formato do datagrama (11 bytes de cabeçalho + até 1024 bytes de payload):
 ## Compilação
 
 ```bash
-cd src
 javac Datagrama.java Receptor.java Emissor.java
 ```
 
