@@ -2,7 +2,7 @@
 
 Trabalho final da disciplina de Redes de Computadores (UNIFAL-MG).
 
-Implementação do protocolo de transferência confiável **Go-Back-N (GBN)** sobre sockets UDP, em Java puro (sem dependências externas além do JDK). Dois módulos independentes, Emissor e Receptor, transferem um arquivo binário entre dois hosts, com simulação de perda de pacotes no lado receptor.
+Implementação do protocolo de transferência confiável **Go-Back-N (GBN)** sobre sockets UDP, em Java puro (sem dependências externas além do JDK). Dois módulos independentes, Emissor e Receptor, transferem um arquivo binário arbitrário entre dois hosts, com simulação de perda de pacotes no lado receptor.
 
 ## Estrutura
 
@@ -48,7 +48,7 @@ java Receptor
 java Emissor <arquivo_origem> <IP_destino>:<path_destino> <tamanho_janela> <prob_perda>
 ```
 
-Exemplo (transferência local com janela 4 e 10% de perda simulada):
+Exemplo (transferência local com janela 4 e 10% de perda simulada). Os caminhos abaixo são só ilustrativos — funciona com qualquer pasta existente no sistema, Windows ou Linux:
 
 ```bash
 java Emissor C:\tmp\arquivo.pdf 127.0.0.1:C:\tmp\arquivo_recebido.pdf 4 0.10
@@ -90,4 +90,3 @@ Análise completa no relatório técnico (PDF no repositório).
 ## Referências
 
 - KUROSE, J.; ROSS, K. *Redes de Computadores: Uma Abordagem Top-Down*. 8. ed. Capítulo 3, Seções 3.4 e 3.4.3.
-
